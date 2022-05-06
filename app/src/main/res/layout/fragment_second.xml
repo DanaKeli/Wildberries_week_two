@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    tools:context=".SecondFragment">
 
     <ImageButton
         android:id="@+id/btn_back"
@@ -15,8 +15,8 @@
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_arrow_back"
         android:background="@drawable/bg_round_gray"
-        app:tint="@color/white"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription"
+        app:tint="@color/white" />
 
     <Button
         android:id="@+id/btn_show_dialog"

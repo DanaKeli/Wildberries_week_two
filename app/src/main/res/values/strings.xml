@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Wildberries_week_two</string>
-    <string name="second_activity">Вторая активити</string>
+    <string name="second_fragment">Второй фрагмент</string>
     <string name="show_dialog">Показать диалог</string>
 </resources>
