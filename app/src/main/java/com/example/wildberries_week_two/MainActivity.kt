@@ -22,36 +22,40 @@ class MainActivity : AppCompatActivity() {
         binding.btnSecondActivity.setOnClickListener {
             startActivity(Intent(this, SecondActivity::class.java))
         }
-        Log.i("Activity lifecycle", "Main activity: onCreate")
+        log("onCreate")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.i("Activity lifecycle", "Main activity: onStart")
+        log("onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i("Activity lifecycle", "Main activity: onResume")
+        log("onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i("Activity lifecycle", "Main activity: onPause")
+        log("onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.i("Activity lifecycle", "Main activity: onStop")
+        log("onStop")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.i("Activity lifecycle", "Main activity: onRestart")
+        log("onRestart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i("Activity lifecycle", "Main activity: onDestroy")
+        log("onDestroy")
+    }
+
+    private fun log(methodName: String) {
+        Log.i("Activity lifecycle", "Main activity: $methodName")
     }
 }

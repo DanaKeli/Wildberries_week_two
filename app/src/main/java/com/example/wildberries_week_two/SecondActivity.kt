@@ -22,36 +22,37 @@ class SecondActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
+        log("onCreate")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.i("Activity lifecycle", "Second activity: onStart")
+        log("onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i("Activity lifecycle", "Second activity: onResume")
+        log("onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i("Activity lifecycle", "Second activity: onPause")
+        log("onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.i("Activity lifecycle", "Second activity: onStop")
+        log("onStop")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.i("Activity lifecycle", "Second activity: onRestart")
+        log("onRestart")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i("Activity lifecycle", "Second activity: onDestroy")
+        log("onDestroy")
     }
 
     private fun showDialog() {
@@ -61,5 +62,9 @@ class SecondActivity : AppCompatActivity() {
                 dialog.cancel()
             }
             .show()
+    }
+
+    private fun log(methodName: String) {
+        Log.i("Activity lifecycle", "Second activity: $methodName")
     }
 }
